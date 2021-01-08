@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import * as AuthActions from './store/auth/auth.actions';
-import { Store } from '@ngrx/store';
-import * as fromApp from './store/app.reducers';
+import { Component, Injectable, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +7,8 @@ import * as fromApp from './store/app.reducers';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
-  constructor(private store: Store<fromApp.AppState>) {
-  }
-
-  ngOnInit(): void {
-    this.store.dispatch(new AuthActions.CheckIfLoggedIn());
-  }
-
-  onActivate($event) {
-    window.scroll(0, 0);
-  }
+  constructor(private router: Router){} 
+  ngOnInit(){
+      this.router.navigateByUrl("home");
+   }
 }

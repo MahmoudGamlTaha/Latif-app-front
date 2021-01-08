@@ -30,12 +30,36 @@ import { AccountService } from './services/account.service';
 import { BrowseEffects } from './store/browse/browse.effects';
 import { VerificationModule } from './verification/verification.module';
 import { NonAuthGuardService } from './services/non-auth-guard.service';
+import { UsersComponent } from './admin/users/users.component';
+import { PetsComponent } from './admin/pets/pets.component';
+import { ShopsComponent } from './admin/shops/shops.component';
+import { BlogsComponent } from './admin/blogs/blogs.component';
+import { OrdersComponent } from './admin/orders/orders.component';
+import { SubscriptionComponent } from './admin/subscription/subscription.component';
+import { BlogCategoriesComponent } from './admin/blog-categories/blog-categories.component';
+import { PetCategoriesComponent } from './admin/pet-categories/pet-categories.component';
+import { RolesComponent } from './admin/roles/roles.component';
+import { UserRolesComponent } from './admin/user-roles/user-roles.component';
+import { AdminLayoutComponent } from './layout/admin/adminLayout.component';
+import { FrontLayoutComponent } from './layout/front/frontLayout.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    GPageNotFoundComponent
+    GPageNotFoundComponent,
+    UsersComponent,
+    PetsComponent,
+    ShopsComponent,
+    BlogsComponent,
+    OrdersComponent,
+    SubscriptionComponent,
+    BlogCategoriesComponent,
+    PetCategoriesComponent,
+    RolesComponent,
+    UserRolesComponent,
+    AdminLayoutComponent,
+    FrontLayoutComponent
   ],
   imports: [
     BrowserModule,
